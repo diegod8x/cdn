@@ -24,5 +24,5 @@ export declare class TooltipAmountComponent implements OnInit, OnChanges, DoChec
     formatClean(value: any): any;
     formatClp(value: any): string;
     formatMoney(value: any): any;
-    msgT(): string | undefined;
+    msgT(): string;
 }

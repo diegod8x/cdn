@@ -86,9 +86,9 @@ export declare class DatePickerRespComponent implements OnInit, OnChanges {
     searchDateInputs(): void;
     cleanData(cadena: any): any;
     compDTE(): void;
-    keyUpDownInputDateLeft(event: any): false | undefined;
-    keyUpDownInputDateRight(event: any): false | undefined;
-    fragmentDate(info: any): string | undefined;
+    keyUpDownInputDateLeft(event: any): boolean;
+    keyUpDownInputDateRight(event: any): boolean;
+    fragmentDate(info: any): string;
     keyDownInputDate(): void;
     changeColorIcon(): void;
     prevMonth(): void;

@@ -40,5 +40,5 @@ export declare class TagCommentComponent implements OnInit, OnChanges {
     closeTooltip2(): void;
     sendInfoTag(comment: string): void;
     deleteInfoTag(comment: string): void;
-    msgError(firstError: any, secondError: any): "(*) Lo sentimos el campo es requerido y no se permiten caracteres especiales" | undefined;
+    msgError(firstError: any, secondError: any): string;
 }

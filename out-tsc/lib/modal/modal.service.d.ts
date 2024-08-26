@@ -9,7 +9,7 @@ export declare class ModalService {
     modalComponentRef: ComponentRef<any>;
     constructor(resolver: ComponentFactoryResolver, injector: Injector, appRef: ApplicationRef, document?: any);
     private _document?;
-    open<T>(content: Content<T>, config: ModalConfig): ModalRef | undefined;
-    resolveNgContent<T>(content: Content<T>, config: ModalConfig): ModalRef | undefined;
+    open<T>(content: Content<T>, config: ModalConfig): ModalRef;
+    resolveNgContent<T>(content: Content<T>, config: ModalConfig): ModalRef;
     close(): void;
 }
