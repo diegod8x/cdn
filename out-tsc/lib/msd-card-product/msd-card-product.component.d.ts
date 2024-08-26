@@ -1,0 +1,36 @@
+import { EventEmitter, OnInit } from "@angular/core";
+import { DataCard } from "./interfaces/data-card.model";
+export declare class MsdCardProductComponent implements OnInit {
+    search: boolean;
+    disabledProduct: boolean;
+    radioButton: boolean;
+    countryProduct: string;
+    iconProduct: string;
+    nameProduct: string;
+    numberProduct: string;
+    feeFromProduct: string;
+    feeUpToProduct: string;
+    moneyProduct: string;
+    expiresProduct: string;
+    amountProduct: number;
+    dateProduct: string;
+    defaulterProduct: boolean;
+    expiredProduct: string;
+    noExpiresProduct: string;
+    defaulterIcon: string;
+    defaulterText: string;
+    nameFooter: string;
+    textDisabled: string;
+    iconSearch: string;
+    nameSearch: string;
+    negativeAmountProduct: boolean;
+    outDataCard: EventEmitter<DataCard>;
+    check: boolean;
+    selectCheck: DataCard;
+    defaulter: boolean;
+    select: boolean;
+    constructor();
+    ngOnInit(): void;
+    selectCard(item: any): void;
+    selectSearch(): void;
+}

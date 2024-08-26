@@ -1,0 +1,38 @@
+import { OnInit, EventEmitter, ElementRef } from '@angular/core';
+export declare class SideNavComponent implements OnInit {
+    private element;
+    trapFocus: boolean;
+    changeWidth: object;
+    changeHeightHeader: object;
+    changeIconClose: object;
+    changePaddingBody: object;
+    widthSideMovil: number;
+    nameIconHeader: string;
+    sizeIconHeader: string;
+    colorIconHeader: string;
+    colorHeader: string;
+    heightHeaderCurved: string;
+    backgroundColorCurved: string;
+    widthSideBar: string;
+    useCommonHeader: string | boolean;
+    heightHeaderNormal: string;
+    nameCloseHeader: string;
+    sizeCloseHeader: string;
+    colorCloseHeader: string;
+    topCloseIcon: string;
+    rightCloseIcon: string;
+    openSideBar: boolean;
+    paddingBody: string;
+    stickyClass: string | boolean;
+    closedSideBar: EventEmitter<boolean>;
+    sdnav: ElementRef;
+    id_button_close?: string;
+    saveActiveEl: any | undefined;
+    constructor(element: ElementRef);
+    onKeydownHandler(event: KeyboardEvent): void;
+    ngOnInit(): void;
+    getActiveElement(): void;
+    ngOnChanges(): void;
+    closeSideBar(): void;
+    openSideBarMenu(): void;
+}

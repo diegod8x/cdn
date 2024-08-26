@@ -1,0 +1,34 @@
+import { ElementRef, EventEmitter, OnInit } from '@angular/core';
+export declare class SearchAmountRespComponent implements OnInit {
+    showWindow: boolean;
+    activeStyles: object;
+    fromValue: string;
+    toValue: string;
+    disabledButton: boolean;
+    expreNumber: RegExp;
+    top: any;
+    left: any;
+    respActive: boolean;
+    statusResp: boolean;
+    set respView(info: boolean);
+    fromInput: ElementRef<HTMLInputElement>;
+    toInput: ElementRef<HTMLInputElement>;
+    wdrop: ElementRef;
+    wd: ElementRef;
+    onClickAmount: EventEmitter<object>;
+    activeWindowMount: EventEmitter<object>;
+    onKeydownHandler(evt: KeyboardEvent): void;
+    onGlobalClick(event: any): void;
+    onResize(event: any): void;
+    onScroll(event: any): void;
+    constructor();
+    ngOnInit(): void;
+    determinateW(): void;
+    showSearchAmoun(): void;
+    closeW(): void;
+    searchAmountInputs(): void;
+    keyPOnlyN(event: any): boolean;
+    keyDownOnInput(event: any): void;
+    changeColorIcon(): void;
+    determinateDimentions(): void;
+}

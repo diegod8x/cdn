@@ -1,0 +1,30 @@
+import { OnInit, EventEmitter, OnChanges, TemplateRef } from '@angular/core';
+export declare class CardMultiProductComponent implements OnInit, OnChanges {
+    nameCardProduct: string;
+    numberInstrument: string;
+    amountCard: any;
+    statusPrivate: boolean;
+    customContent: boolean;
+    onClick: EventEmitter<string>;
+    customInfoTemplateRef: TemplateRef<any>;
+    typeBech: boolean;
+    inversePoint: boolean;
+    footerCard: boolean;
+    productCardName: string;
+    instrumentNumber: string;
+    cardAmount: any;
+    privateStatus: boolean;
+    contentCustom: boolean;
+    bechType: boolean;
+    pointInverse: boolean;
+    cardFooter: boolean;
+    contentLoaded: boolean;
+    constructor();
+    ngOnInit(): void;
+    ngOnChanges(): void;
+    sendAction(e: any): void;
+    longCad(value: any): any;
+    cleanAmountBech(texto: any): any;
+    intervaT(texto: any): string;
+    formatBalance(nStr: any): string;
+}

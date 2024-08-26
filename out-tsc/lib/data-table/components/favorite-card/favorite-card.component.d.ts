@@ -1,0 +1,36 @@
+import { OnInit, OnChanges, EventEmitter, ElementRef } from '@angular/core';
+export declare class FavoriteCardComponent implements OnInit, OnChanges {
+    private eleRef;
+    constructor(eleRef: ElementRef);
+    idxEle: number;
+    infoEle: Array<any>;
+    namePropertyFavorite: string;
+    namePropertyComments: string;
+    namePropertyDate: string;
+    namePropertyNumCart: string;
+    dataDropdown: any;
+    infoEventLink: EventEmitter<any>;
+    infoExtDropdown: EventEmitter<any>;
+    removeNewItemCard: EventEmitter<any>;
+    eleIdx: number;
+    eleInfo: Array<any>;
+    favoritePropertyName: string;
+    commentsPropertyName: string;
+    datePropertyName: string;
+    cartNumPropertyName: string;
+    activeFavoriteNum: number;
+    dropDownData: any;
+    cardItemLeft: any;
+    dirFl: string;
+    onResize(event: any): void;
+    determinateW(): void;
+    dirFlt(info: any): "right" | "left";
+    ngOnInit(): void;
+    ngOnChanges(): void;
+    setDimention(): void;
+    getRespDimention(): boolean;
+    removeNewFavorites(info: any): void;
+    setExtInfoLink(e: any): void;
+    setExtInfoDropdown(idx: number, info: any): void;
+    getInfoAcc(): string;
+}

@@ -1,0 +1,36 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { ButtonModel } from './constants';
+import { TYPE_KEYBOARD } from './constants/models';
+export declare class KeyboardComponent implements OnInit {
+    btnActive: boolean;
+    emailHint: boolean;
+    typeKeyboard: TYPE_KEYBOARD;
+    regularExp: RegExp;
+    btnName: string;
+    hintMail: EventEmitter<string>;
+    _hintMail: string;
+    keyPressEventEmitter: EventEmitter<string>;
+    pressKey: EventEmitter<string>;
+    _pressKey: string;
+    pressDelete: EventEmitter<string>;
+    _pressDelete: string;
+    keyNextAction: EventEmitter<string>;
+    _nextAction: string;
+    isUppercase: boolean;
+    buttons: Array<ButtonModel>;
+    KEY_DELETE: string;
+    KEY_SHIFT: string;
+    localValue: string;
+    emailOptions: string[];
+    show: boolean;
+    constructor();
+    ngOnInit(): void;
+    btnKey(value: string): void;
+    btnShift(value: boolean): void;
+    changeButtonValue(buttons: ButtonModel[], isUppercase: boolean): void;
+    btnDelete(): void;
+    deleteLastCharacter(): void;
+    btnNextAction(): void;
+    optionMail(mail: string): void;
+    validateMatchHint(): void;
+}

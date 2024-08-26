@@ -1,0 +1,32 @@
+import { OnInit, OnChanges } from '@angular/core';
+export declare class CardTdcComponent implements OnInit, OnChanges {
+    nameCardTdc: string;
+    numberInstrument: string;
+    avaibleAmountCLP: string;
+    usedAmountCLP: string;
+    avaibleAmountUS: string;
+    usedAmountUS: string;
+    statusPrivate: boolean;
+    typeCard: string;
+    backStyColor: string;
+    typeBech: boolean;
+    inversePoint: boolean;
+    tdcCardName: string;
+    instrumentNumber: string;
+    clpAmountAvaible: string;
+    clpAmountUsed: string;
+    usAmountAvaible: string;
+    usAmountUsed: string;
+    privateStatus: boolean;
+    cardType: string;
+    colorStyBack: string;
+    bechType: boolean;
+    pointInverse: boolean;
+    constructor();
+    ngOnInit(): void;
+    ngOnChanges(): void;
+    showTdc(tdcNum: any): any;
+    cleanAmountBech(texto: any): any;
+    intervaT(texto: any): string;
+    formatBalance(nStr: any): string;
+}

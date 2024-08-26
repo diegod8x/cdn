@@ -1,0 +1,30 @@
+import { ElementRef, EventEmitter, OnInit, Renderer2, OnChanges } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+export declare class CardKeyInputComponent implements OnInit, OnChanges {
+    private _render;
+    private _fb;
+    nameIconInput: string;
+    activatedBorderAlert: boolean;
+    cardError: boolean;
+    titlePass: string;
+    titleTwoPass: string;
+    finishPassKey: boolean;
+    msgError: string;
+    c1Input: ElementRef<HTMLInputElement>;
+    c2Input: ElementRef<HTMLInputElement>;
+    c3Input: ElementRef<HTMLInputElement>;
+    c4Input: ElementRef<HTMLInputElement>;
+    passCard: EventEmitter<string>;
+    forgotKey: EventEmitter<string>;
+    formInter: FormGroup;
+    constructor(_render: Renderer2, _fb: FormBuilder);
+    ngOnInit(): void;
+    ngOnChanges(): void;
+    changeIconPass(): void;
+    onlyNumber(event: any): boolean;
+    moveToInput(event: any): void;
+    backToInput(event: any): void;
+    sendValuesKey(): void;
+    forgotKeyMethod(): void;
+    getInfoCardAttr(): string;
+}
