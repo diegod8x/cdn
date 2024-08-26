@@ -27,6 +27,6 @@ export declare class CardTdcComponent implements OnInit, OnChanges {
     ngOnChanges(): void;
     showTdc(tdcNum: any): any;
     cleanAmountBech(texto: any): any;
-    intervaT(texto: any): string;
-    formatBalance(nStr: any): string;
+    intervaT(texto: any): string | null;
+    formatBalance(nStr: any): string | undefined;
 }

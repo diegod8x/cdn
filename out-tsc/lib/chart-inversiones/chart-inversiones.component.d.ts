@@ -1,6 +1,6 @@
 import { OnInit } from '@angular/core';
 export declare class ChartInversionesComponent implements OnInit {
-    productos: any[];
+    productos: never[];
     total: number;
     constructor();
     ngOnInit(): void;

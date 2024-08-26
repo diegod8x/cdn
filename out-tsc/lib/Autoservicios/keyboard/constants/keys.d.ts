@@ -39,7 +39,7 @@ export declare const KEY_POINT = ".";
 export declare const KEY_UNDERSCORE = "_";
 export declare const KEY_HYPHEN = "-";
 export declare const KEY_AT = "@";
-export declare const KEY_NULL: any;
+export declare const KEY_NULL: null;
 export declare const KEY_SPACE = "space";
 export declare const KEY_ASTERISK = "asterisk";
 export declare const KEY_DELETE = "delete";
