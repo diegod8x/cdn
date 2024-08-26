@@ -117,7 +117,7 @@ export declare class InputDatepickerComponent implements OnInit, OnChanges, OnDe
     dimentionCalendar(): void;
     showCalendar(): void;
     hiddeCalendar(): void;
-    renameDate(fm: any, ty: any): string;
+    renameDate(fm: any, ty: any): string | undefined;
     addClassDaysRight(value: any): object;
     addClassDaysLeft(value: any, value2: any): object;
     deleteClassDaysRight(value?: string): void;

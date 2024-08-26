@@ -17,5 +17,5 @@ export declare class ShowAllSelectComponent implements OnInit {
     toggle(): void;
     open(): void;
     close(): void;
-    convertCamelCase(info: string): string;
+    convertCamelCase(info: string): string | undefined;
 }
