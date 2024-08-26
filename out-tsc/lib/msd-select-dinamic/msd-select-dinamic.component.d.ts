@@ -16,7 +16,7 @@ export declare class MsdSelectDinamicComponent implements OnInit, OnChanges {
     ngOnInit(): void;
     ngOnChanges(): void;
     setInfoFirstItem(): void;
-    orderNoRepeat(infoArray: any): unknown[];
+    orderNoRepeat(infoArray: any): any;
     openToggle(): void;
     changeOptionsSelect(key: any, newItem: any): void;
 }

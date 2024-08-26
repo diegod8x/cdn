@@ -79,9 +79,9 @@ export declare class DatepickerComponent implements OnInit {
     searchDateInputs(): void;
     cleanData(cadena: any): any;
     compDTE(): void;
-    keyUpDownInputDateLeft(event: any): false | undefined;
-    keyUpDownInputDateRight(event: any): false | undefined;
-    fragmentDate(info: any): string | undefined;
+    keyUpDownInputDateLeft(event: any): boolean;
+    keyUpDownInputDateRight(event: any): boolean;
+    fragmentDate(info: any): string;
     keyDownInputDate(): void;
     changeColorIcon(): void;
     prevMonth(): void;
@@ -102,5 +102,5 @@ export declare class DatepickerComponent implements OnInit {
     cornerStyleRightElement(): void;
     converDateValue(dateValue: string): Date;
     validateActiveButton(fromConverValue: Date, toConverValue: Date, fromDateValue: string, toDateValue: string): void;
-    renameDate(fm: any, ty: any): string | undefined;
+    renameDate(fm: any, ty: any): string;
 }

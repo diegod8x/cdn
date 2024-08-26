@@ -25,6 +25,6 @@ export declare class CardMultiProductComponent implements OnInit, OnChanges {
     sendAction(e: any): void;
     longCad(value: any): any;
     cleanAmountBech(texto: any): any;
-    intervaT(texto: any): string | null;
-    formatBalance(nStr: any): string | undefined;
+    intervaT(texto: any): string;
+    formatBalance(nStr: any): string;
 }

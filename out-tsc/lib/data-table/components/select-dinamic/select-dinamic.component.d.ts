@@ -33,7 +33,7 @@ export declare class SelectDinamicComponent implements OnInit, OnChanges {
     setInfoFirstItem(): void;
     convertCamelCase2(info: string): string;
     convertCamelCase(info: string): string;
-    orderNoRepeat(infoArray: any): unknown[] | undefined;
+    orderNoRepeat(infoArray: any): any;
     openToggle(): void;
     open(): void;
     close(): void;

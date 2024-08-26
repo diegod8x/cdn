@@ -38,9 +38,9 @@ export declare class MsdFilterSearchComponent implements OnInit, OnChanges {
     constructor(eleRef: ElementRef);
     ngOnInit(): void;
     ngOnChanges(): void;
-    orderNoRepeat(infoArray: any): unknown[] | undefined;
+    orderNoRepeat(infoArray: any): any;
     setInfoFirstItem(): void;
-    convertCamelCase(info: string): string | undefined;
+    convertCamelCase(info: string): string;
     openSelect(): void;
     closeSelect(): void;
     openFilBtn(): void;

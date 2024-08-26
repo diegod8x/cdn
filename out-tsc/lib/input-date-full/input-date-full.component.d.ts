@@ -66,7 +66,7 @@ export declare class InputDateFullComponent implements OnInit {
     monthMode: boolean;
     meses: string[];
     lasemana: string[];
-    anios: never[];
+    anios: any[];
     diassemana: string[];
     fromDateInput: ElementRef<HTMLInputElement>;
     toDateInput: ElementRef<HTMLInputElement>;
@@ -128,7 +128,7 @@ export declare class InputDateFullComponent implements OnInit {
     dimentionCalendar(): void;
     showCalendar(): void;
     hiddeCalendar(): void;
-    renameDate(fm: any, ty: any): string | undefined;
+    renameDate(fm: any, ty: any): string;
     addClassDaysRight(value: any): object;
     addClassDaysLeft(value: any, value2: any): object;
     addClassYears(year: any): object;
