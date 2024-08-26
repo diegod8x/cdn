@@ -1,4 +1,3 @@
-export * from './mandarina.module';
 export * from "./lib/button/button.module";
 export * from "./lib/bottom-sheet/bottom-sheet.module";
 export * from "./lib/header/header.module";
