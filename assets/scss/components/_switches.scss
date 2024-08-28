@@ -1,0 +1,134 @@
+.switch-box {
+    display: flex;
+    .toggle {
+        position: relative;
+        display: inline-block;
+        width: 48px;
+        height: 24px;
+        background-color: $BlackBech50;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle:after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 4px;
+        left: 4px;
+        cursor: pointer;
+        box-shadow: $card-shadow-short;
+    }
+    .on-off {
+        font-size: 0.625rem;
+        font-weight: bold;
+        text-align: center;
+        height: 20px;
+        line-height: 24px;
+    }
+    .checkbox:checked+.toggle::after {
+        left: 27px;
+        cursor: pointer;
+    }
+    .checkbox:checked+.toggle {
+        background-color: $AccentBech100;
+        cursor: pointer;
+        .on-off {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+    .checkbox {
+        //display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .checkbox:disabled+.toggle {
+        opacity: .5;
+    }
+}
+
+/* new Switches */
+label.switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    gap: 8px;
+    .label {
+        user-select: none;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+    input[role="switch"] {
+        width: 38px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        border-radius: 11px;
+        ~ {
+            .state {
+                display: inline-flex;
+                user-select: none;
+                >.container {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    width: 38px;
+                    height: 22px;
+                    border-radius: 11px;
+                    background-color: $BlackBech70;
+                    >.position {
+                        position: relative;
+                        left: 2px;
+                        border-radius: 50%;
+                        width: 18px;
+                        height: 18px;
+                        background: #fff;
+                        transition: all ease .3s;
+                    }
+                }
+            }
+        }
+        &:not(:checked) {
+            ~ {
+                .state {
+                    span.on {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &:checked {
+            ~ {
+                .state {
+                    >span.off {
+                        display: none;
+                    }
+                    >.container {
+                        background-color: $AccentBech100;
+                        >.position {
+                            left: 18px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &:disabled {
+            opacity: 0;
+            ~ {
+                .state {
+                    opacity: .45;
+                }
+            }
+        }
+      
+    }
+}

@@ -1,0 +1,145 @@
+.msd-titulo1 {
+  font-size: 2rem;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+.msd-titulo2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.msd-titulo3 {
+  font-size: 1.25rem;
+  line-height: 28px;
+  font-weight: 800;
+}
+
+.msd-large {
+  font-size: 1.125rem;
+  line-height: 26px;
+  font-weight: 400;
+
+  &--bold {
+    @extend .msd-large;
+    font-weight: 700;
+  }
+
+  &--extra-bold {
+    @extend .msd-large;
+    font-weight: 800;
+  }
+}
+
+.msd-body {
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 400;
+
+  &--bold {
+    @extend .msd-body;
+    font-weight: 700;
+  }
+
+  &--extra-bold {
+    @extend .msd-body;
+    font-weight: 800;
+  }
+}
+
+.msd-small {
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 400;
+
+  &--bold {
+    @extend .msd-small;
+
+    font-weight: 700;
+  }
+}
+
+.msd-mini {
+  font-size: 0.75rem;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.msd-micro {
+  font-size: 0.625rem;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+.bech_headline {
+  font-size: 1.5rem;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.bech_subheader {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.bech_body {
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.bech_caption {
+  font-size: 0.75rem;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.font_bolder {
+  font-weight: 800 !important;
+}
+
+.font_bold {
+  font-weight: 700 !important;
+}
+
+.font_semibold {
+  font-weight: 600 !important;
+}
+
+.font_regular {
+  font-weight: 400 !important;
+}
+
+.font_light {
+  font-weight: 300 !important;
+}
+
+.bech_head_pantalla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon {
+    font-size: 4rem;
+    display: flex;
+    height: 64px;
+    width: 64px;
+    margin: 24px 0;
+  }
+
+  &__titulo {
+    font-size: 1.25rem;
+    line-height: 28px;
+    padding: 0 24px 8px;
+    font-weight: 700;
+  }
+
+  &__subtitulo {
+    font-size: 1rem;
+    line-height: 24px;
+    padding: 0 24px 16px;
+    text-align: center;
+  }
+}  

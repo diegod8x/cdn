@@ -1,0 +1,239 @@
+
+// Checkbox 
+
+.msd-checkbox {
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    -moz-appearance:initial; // Hack for Firefox Browsers
+    position: absolute;
+    left: -9999px;
+
+    & + label {
+      position: relative;
+      display: inline-block;
+      padding: 12px 16px 12px 32px;
+      cursor: pointer;
+      width: 100%;
+
+      // Default State
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $font_color_50;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: none;
+      }
+    }
+
+    // Checked State
+    &:checked + label {
+      &::before {
+        background: $bech_color;
+        border: 2px solid $bech_color;
+      }
+
+      &::after {
+        width: 7px;
+        height: 13px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        display: block;
+        position: absolute;
+        left: 7px;
+        top: 15px;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    // Disabled State
+    &:disabled {
+      & + label {
+        cursor: not-allowed;
+
+        &::before {
+          opacity: 0.5;
+        }
+      }
+
+      // Disabled Checked
+      &:checked + label {
+        &::before {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+
+
+  //CHECKBOXv2
+  .msd-check{
+    border-radius: 8px;
+    display: block;
+    margin: 0 0 8px;
+    padding: 0 8px 0 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    .msd_form_check {
+      display: grid;
+      flex-direction: row;
+      align-items: start;
+      justify-content: stretch;
+      font-size: .875rem;
+      font-weight: 700;
+      gap: 8px;
+      padding: 8px 16px;
+      line-height: 1;
+      grid-template-columns: 20px 1fr;
+      &__input {
+          position: relative;
+          border-radius: 50%;
+          transition: all ease .15s;
+          width: 18px;
+          height: 20px;
+          margin-right: 4px;
+          flex-shrink: 0;
+          cursor: pointer;
+          &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 20px;
+              width: 20px;
+              background: white;
+              border-radius: 3px;
+              border: 1px solid $BlackBech70;
+              padding: 2px;
+              box-sizing: border-box;
+              line-height: 15px;
+              text-align: center;
+          }
+          &:active {
+              opacity: 1;
+              transform: scale(.5);
+              transition: opacity .3s, transform .3s;
+          }
+          &:checked::before {
+              background: $AccentBech100;
+              border: 1px solid $AccentBech100;
+              box-shadow: inset 0 0 0 4px #fff;
+          }
+      }
+      &__label {
+          cursor: pointer;
+          padding-top: 4px;
+      }
+  }
+  
+  .msd_form_check_disactive {
+      display: grid;
+      flex-direction: row;
+      align-items: start;
+      justify-content: stretch;
+      font-size: .875rem;
+      font-weight: 700;
+      gap: 8px;
+      padding: 8px 16px;
+      line-height: 1;
+      grid-template-columns: 20px 1fr;
+      
+      &__input {
+          position: relative;
+          border-radius: 50%;
+          transition: all .15s ease;
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+          flex-shrink: 0;
+          cursor: pointer;
+  
+          &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 20px;
+              width: 20px;
+              border-radius: 3px;
+              padding: 2px;
+              box-sizing: border-box;
+              line-height: 15px;
+              text-align: center;
+          }
+          &:checked::before {
+              background: #c3c7ce;
+              color:#c3c7ce;
+              border: initial;
+              box-shadow: initial;
+              box-shadow: inset 0 0 0 4px #e1e4e7;
+              border: 1px solid $BlackBech70 !important;
+          }
+      }
+      &__label {
+          cursor: pointer;
+          padding-top: 4px;
+          color:#c3c7ce;
+      }
+  }
+  
+  &.check_icon {
+      .msd_form_check {
+          &__input {
+              &:checked::before {
+                  box-shadow: none;
+                  background: $AccentBech100;
+                  border: 1px solid $AccentBech100;
+                  color: #fff;
+                  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19.687 6.572a.6.6 0 00-.849.008L9.26 16.328l-4.236-4.235a.6.6 0 10-.848.848l4.664 4.664a.6.6 0 00.424.176h.002a.6.6 0 00.426-.18l10.003-10.18a.6.6 0 00-.008-.85'%3E%3C/path%3E%3C/svg%3E");
+                  background-position: 20px 20px;
+                  background-size: 22px;
+              }
+          }
+      }
+      .msd_form_check_disactive {
+          &__input {
+              &:checked::before {
+                  box-shadow: none;
+                  background: #c3c7ce;
+                  border: 2px solid #c3c7ce;
+                  color: #c3c7ce;
+                  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19.687 6.572a.6.6 0 00-.849.008L9.26 16.328l-4.236-4.235a.6.6 0 10-.848.848l4.664 4.664a.6.6 0 00.424.176h.002a.6.6 0 00.426-.18l10.003-10.18a.6.6 0 00-.008-.85'%3E%3C/path%3E%3C/svg%3E");
+                  background-position: 20px 20px;
+                  background-size: 22px;
+              }
+          }
+      }
+  }
+  }
+  .msd-content-check__subtext , .content-select-radio__subtext , .msd-content-check_disactive__subtext {
+    font-size: 0.75rem;
+    font-weight: 200;
+    grid-column: 2 / 3;
+    @media (max-width: 480px) {
+        margin: 0;
+        padding-left: 0;
+    }
+  }
+  
+  .msd-content-check_disactive__subtext {
+    color: #c3c7ce;
+  }
+  input[type='checkbox'], input[type='radio']{
+    accent-color: $AccentBech100;
+  }

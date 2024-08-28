@@ -1,0 +1,113 @@
+//CHECKBOX
+// .checkbox-bech {
+//     position: relative;
+//     display: inline-block;
+//     cursor: pointer;
+//     font-size: 0.875rem;
+//     line-height: 18px;
+// }
+
+// .checkbox-bech>input {
+//     appearance: none;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     position: absolute;
+//     z-index: -1;
+//     left: -20px;
+//     top: -12px;
+//     display: block;
+//     margin: 0;
+//     border-radius: 50%;
+//     width: 58px;
+//     height: 58px;
+
+//     outline: none;
+
+//     transform: scale(1);
+//     -ms-transform: scale(0);
+
+//     transition: opacity 0.5s, transform 0.5s;
+//     border: none;
+// }
+
+// .checkbox-bech>input:checked {
+//     background-color: #ffffff;
+// }
+
+// .checkbox-bech:active>input {
+//     opacity: 1;
+//     transform: scale(0);
+//     transition: opacity 0s, transform 0s;
+// }
+
+// .checkbox-bech>input:disabled {
+//     opacity: 0;
+// }
+
+// .checkbox-bech>input:disabled+span {
+//     cursor: initial;
+// }
+
+// .checkbox-bech>span::before {
+//     content: "";
+//     display: inline-block;
+//     margin-right: 15px;
+//     border: solid 2px rgba(0, 0, 0, 0.42);
+//     border-radius: 2px;
+//     width: 20px;
+//     height: 20px;
+//     vertical-align: -6px;
+//     transition: border-color 0.5s, background-color 0.5s;
+// }
+
+// .checkbox-bech>input:checked+span::before {
+//     border-color: $bech_color;
+//     background-color: $bech_color;
+// }
+
+// .checkbox-bech>input:active+span::before {
+//     border-color: $bech_color;
+// }
+
+// .checkbox-bech>input:checked:active+span::before {
+//     border-color: transparent;
+//     background-color: rgba(0, 0, 0, 0.42);
+// }
+
+// .checkbox-bech>input:disabled+span::before {
+//     border-color: rgba(0, 0, 0, 0.26);
+// }
+
+// .checkbox-bech>input:checked:disabled+span::before {
+//     border-color: transparent;
+//     background-color: rgba(0, 0, 0, 0.26);
+// }
+
+// .checkbox-bech>span::after {
+//     content: "";
+//     display: inline-block;
+//     position: absolute;
+//     top: -5px;
+//     left: 0;
+//     width: 8px;
+//     height: 14px;
+//     border: solid 2px transparent;
+//     border-left: none;
+//     border-top: none;
+//     transform: translate(6.6px, 6px) rotate(45deg);
+//     -ms-transform: translate(5.5px, 2px) rotate(45deg);
+// }
+
+// .checkbox-bech>input:checked+span::after {
+//     border-color: #fff;
+// }
+
+
+
+// .radio-bech,
+
+
+// $bech_white:#fff;
+
+
+

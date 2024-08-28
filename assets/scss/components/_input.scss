@@ -1,0 +1,302 @@
+/*--- Input ---*/
+
+select ~ :after {
+  display: none;
+}
+
+.input-bech-label {
+  &.bech-select {
+    position: relative;
+
+    &.disabled {
+      pointer-events: none;
+
+      select {
+        color: $font_color;
+        font-weight: 400;
+        background: #f7f7f7;
+      }
+
+      &::after {
+        opacity: 0.6;
+      }
+    }
+
+    select {
+      appearance: none;
+      padding-right: 32px;
+      background: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%233e50b4' fill-rule='evenodd' d='M19.951 7.785a.6.6 0 00-.848 0l-7.035 7.035-7.044-7.044a.6.6 0 10-.848.848l7.468 7.469a.601.601 0 00.849 0l7.458-7.46a.6.6 0 000-.848'/%3E%3C/svg%3E") no-repeat right 12px center;
+    }
+  }
+}
+
+.input-bech-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+
+  label {
+    font-size: 0.875rem;
+    line-height: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: $font_color;
+    transition: 0.25s ease-in-out;
+  }
+
+  &:focus-within label {
+    color: $bech_color;
+  }
+
+  &.input-prefix {
+    .prefix {
+      position: absolute;
+      top: 32px;
+      left: 16px;
+      font-weight: 700;
+    }
+
+    input {
+      padding-left: 62px;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 4px;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #ffffff;
+    border: solid 1px $border_color;
+    padding: 9px 16px;
+    line-height: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.25s ease-in-out;
+    color: $font_color;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: $font_color2;
+      font-weight: 400;
+    }
+
+    &:active {
+      border: solid 1px $bech_color;
+      color: $font_color;
+    }
+
+    &:focus {
+      outline: 0;
+      border: solid 1px $bech_color;
+      color: $font_color;
+    }
+
+    &:focus + label {
+      color: #cc0000 !important;
+    }
+
+    &:disabled {
+      //color: $font_color_light;
+      font-weight: 400;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .info-text {
+    font-size: 0.75rem;
+    line-height: 16px;
+    margin-top: 4px;
+    color: $font_color;
+    font-weight: 600;
+
+    &:empty {
+      margin: 0;
+    }
+
+    &--error {
+      color: $red-color;
+    }
+
+    &--success {
+      color: $GreenEmerald120;
+    }
+
+    &--hint {
+      color: $text-disable;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-invalid.ng-touched {
+  border: solid 1px $red_color;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+/*--- Fin Input ---*/
+
+
+/*--- Selector doble línea ---*/
+
+.bech-select {
+  &__border {
+    border: solid 1px $border_color;
+    border-radius: 4px;
+
+    select {
+      width: 100%;
+      border: none;
+
+      &:active {
+        border: 0 solid transparent !important;
+      }
+
+      &:focus {
+        border: 0 solid transparent !important;
+      }
+    }
+  }
+
+  &__info {
+    color: $font_color;
+    font-size: 0.875rem;
+    padding: 0px 16px 11px;
+
+    &:empty {
+      height: 0;
+      display: none;
+    }
+  }
+}
+
+/*--- Fin Selector doble línea ---*/
+
+//Ojo abierto y cerrado para "cambio de clave internet"
+.bech-content_eye {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &-btn {
+    width: 24px;
+    height: 24px;
+    align-self: auto;
+    text-align: center;
+    position: absolute;
+    right: 12px;
+    top: 30px;
+  }
+}
+
+
+/*--- Ojo contraseña ---*/
+
+.input-bech-label {
+  &.eye-open {
+    position: relative;
+  }
+}
+
+.eyeButton {
+  float: right;
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  font-size: 1.5rem;
+}
+
+/*--- Fin Ojo contraseña ---*/
+
+/*--- Semáforo de validación ---*/
+
+.info-contrasena {
+  padding: 16px 24px;
+
+  &__info-text {
+    color: $font_color;
+    padding-bottom: 4px;
+    font-size: 0.875rem;
+  }
+
+  &__validacion {
+    font-size: 0.875rem;
+    color: #868c99;
+    display: flex;
+    padding-bottom: 4px;
+    transition: .25s all ease-in-out;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="gray" fill-rule="evenodd" d="M12.094 3.086c4.967 0 9.008 4.041 9.008 9.008 0 4.967-4.04 9.008-9.008 9.008-4.967 0-9.008-4.04-9.008-9.008 0-4.967 4.04-9.008 9.008-9.008zm0 1.028c-4.4 0-7.98 3.58-7.98 7.98s3.58 7.98 7.98 7.98 7.98-3.58 7.98-7.98-3.58-7.98-7.98-7.98zm4.029 5.067a.514.514 0 01.006.727L11.126 15a.515.515 0 01-.365.154h-.002a.515.515 0 01-.364-.15L8.062 12.67a.514.514 0 11.727-.727l1.967 1.966 4.64-4.723a.514.514 0 01.727-.006z"/></svg>');
+      color: $font_color2;
+      height: 24px;
+      width: 24px;
+      border-radius: 100px;
+      display: inline-block;
+      font-weight: 400;
+      margin-right: 8px;
+      flex-shrink: 0;
+      transition: .25s all ease-in-out;
+    }
+
+    &.success {
+      color: $green_color;
+
+      &::before {
+        content: "";
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#06c47b" fill-rule="evenodd" d="M12.094 3.086c4.967 0 9.008 4.041 9.008 9.008 0 4.967-4.04 9.008-9.008 9.008-4.967 0-9.008-4.04-9.008-9.008 0-4.967 4.04-9.008 9.008-9.008zm0 1.028c-4.4 0-7.98 3.58-7.98 7.98s3.58 7.98 7.98 7.98 7.98-3.58 7.98-7.98-3.58-7.98-7.98-7.98zm4.029 5.067a.514.514 0 01.006.727L11.126 15a.515.515 0 01-.365.154h-.002a.515.515 0 01-.364-.15L8.062 12.67a.514.514 0 11.727-.727l1.967 1.966 4.64-4.723a.514.514 0 01.727-.006z"/></svg>');
+      }
+    }
+
+    &.error {
+      color: $red-color;
+
+      &::before {
+        content: "";
+        background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.094 3.086c4.967 0 9.008 4.04 9.008 9.008 0 4.967-4.04 9.008-9.008 9.008-4.967 0-9.008-4.041-9.008-9.008 0-4.967 4.04-9.008 9.008-9.008zm0 1.028c-4.4 0-7.98 3.58-7.98 7.98s3.58 7.98 7.98 7.98 7.98-3.58 7.98-7.98-3.58-7.98-7.98-7.98zm-2.91 5.07c.2-.201.526-.201.727 0l2.183 2.183 2.183-2.183a.514.514 0 11.727.727l-2.183 2.183 2.183 2.183a.514.514 0 01-.727.727l-2.183-2.183-2.183 2.183a.513.513 0 01-.727 0c-.2-.2-.2-.526 0-.727l2.183-2.183-2.183-2.183c-.2-.2-.2-.527 0-.727z" fill="red" fill-rule="evenodd"/></svg>');
+      }
+    }
+  }
+}
+
+.ShowPassword {
+  -webkit-text-security: none;
+}
+
+.HidePassword {
+  -webkit-text-security: disc;
+}
+
+.ItemCorrecto {
+  color: #06c47b;
+}
+
+.ItemIncorrecto {
+  color: #868c99 !important;
+}
+
+.ItemIncorrectoGris {
+  color: #868c99;
+}
+
+.input-icon-right {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  font-size: 1.5rem;
+}
+
+/*--- Fin Semáforo de validación ---*/

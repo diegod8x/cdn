@@ -1,0 +1,117 @@
+//RADIO
+$radio-size: 20px;
+$radio-checked-size: 10px;
+$radio-ripple-size: 15px;
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+    }
+    50% {
+        box-shadow: 0px 0px 0px $radio-ripple-size rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0px 0px 0px $radio-ripple-size rgba(0, 0, 0, 0);
+    }
+}
+
+.msd-radio {
+    margin: 16px 0;
+    &.radio-inline {
+        display: inline-block;
+    }
+    input[type="radio"] {
+        -moz-appearance:initial;
+        display: none;
+        &:checked+label:before {
+            border-color: $BlackBech50;
+
+        }
+        &:checked+label:after {
+            transform: scale(1);
+        }
+    }
+    label {
+        display: inline-block;
+        position: relative;
+        padding: 0 ($radio-size + 15px);
+        margin-bottom: 0;
+        cursor: pointer;
+        vertical-align: bottom;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            transition: all .3s ease;
+            transition-property: transform, border-color;
+        }
+        &::before {
+            left: 0;
+            top: 2px;
+            width: $radio-size;
+            height: $radio-size;
+            border: 2px solid $BlackBech50;
+        }
+        &::after {
+            top: 7px;
+            left: 5px;
+            width: $radio-checked-size;
+            height: $radio-checked-size;
+            transform: scale(0);
+            background: $BlackBech50;
+        }
+    }
+}
+
+.content-select-radio {
+    display: grid;
+    align-items: start;
+    justify-content: stretch;
+    font-size: 0.875rem;
+    font-weight: 700;
+    gap: 8px;
+    padding: 8px 16px;
+    line-height: 1;
+    grid-template-columns: 20px 1fr;
+    &__input {
+        position: relative;
+        border-radius: 50%;
+        transition: all ease 0.15s;
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+
+        cursor: pointer;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: $White100;
+            border-radius: 50%;
+            border: 2px solid $BlackBech50;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+        &:active {
+            opacity: 1;
+            transform: scale(0.5);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        &:checked::before {
+            background: $AccentBech100;
+            border: 1px solid $BlackBech50;
+            box-shadow: inset 0 0 0 4px $White100;
+        }
+    }
+    &__label {
+        padding-top: 4px;
+        cursor: pointer;
+    }
+    .msd-icon {
+        width: 32px;
+        height: 32px;
+        background: #ccc;
+    }
+}

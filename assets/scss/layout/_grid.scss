@@ -1,0 +1,171 @@
+/*=============================================
+    =            Estilos globales     =
+=============================================*/
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: auto; 
+}
+
+.row {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	clear: both;
+	display: table;
+}
+
+[class*="col-"] {
+	float: left;
+	padding: 16px;
+}
+
+@mixin medias ($widthQ1, $widthQ2, $devices) {    
+    @if $devices == "xs" {
+        @media (max-width: $widthQ1) {
+            @for $i from 1 through 12 {
+                .col-#{$devices}-#{$i} {
+                    width: $i * (25% / 3);
+                }
+            }
+        }
+    }
+    @else if $devices == "xl" {
+        @media (min-width: $widthQ1) {
+            @for $i from 1 through 12 {
+                .col-#{$devices}-#{$i} {
+                    width: $i * (25% / 3);
+                }
+            }
+        }
+    } 
+    @else {
+        @media (min-width: $widthQ1 ) and (max-width: $widthQ2) {
+            @for $i from 1 through 12 {
+                .col-#{$devices}-#{$i} {
+                    width: $i * (25% / 3);
+                }
+            }
+        }  
+    } 
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@include medias(575.99999998px,0,xs);
+
+// Small devices (landscape phones, 576px and up)
+@include medias(576px,767.999998px,sm);
+
+// Medium devices (tablets, 768px and up)
+@include medias(768px,991.999998px,md);
+
+// Large devices (desktops, 992px and up)
+@include medias(992px,1199.999998px,lg);
+
+// Extra large devices (large desktops, 1200px and up)
+@include medias(1200px,0,xl);
+
+
+
+
+//NEW GRID SYSTEM
+// FLEXBOX
+$width: 100%;
+$gutter: 0%;
+$breakpoint-small: 22.5em; // 360px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+.msd-grid__container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.msd-grid__row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  @media (max-width: 430px) {
+    display: block;
+  }
+}
+
+.msd-grid__row [class^="col"] {
+  float: left;
+  // margin: 0.5rem;
+  min-height: 0.125rem;
+
+}
+
+// .msd-grid__row::after {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }
+[class*="msd-grid__col-"] {
+  padding: 8px 0;
+}
+
+.msd-grid__col-1,
+.msd-grid__col-2,
+.msd-grid__col-3,
+.msd-grid__col-4,
+.msd-grid__col-5,
+.msd-grid__col-6,
+.msd-grid__col-7,
+.msd-grid__col-8,
+.msd-grid__col-9,
+.msd-grid__col-10,
+.msd-grid__col-11,
+.msd-grid__col-12 {
+  width: $width;
+}
+
+.msd-grid__col-1-sm { width:($width / 12) - ($gutter * 11 / 12); }
+.msd-grid__col-2-sm { width: ($width / 6) - ($gutter * 10 / 12); }
+.msd-grid__col-3-sm { width: ($width / 4) - ($gutter * 9 / 12); }
+.msd-grid__col-4-sm { width: ($width / 3) - ($gutter * 8 / 12); }
+.msd-grid__col-5-sm { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+.msd-grid__col-6-sm { width: ($width / 2) - ($gutter * 6 / 12); }
+.msd-grid__col-7-sm { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+.msd-grid__col-8-sm { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+.msd-grid__col-9-sm { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+.msd-grid__col-10-sm { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+.msd-grid__col-11-sm { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+.msd-grid__col-12-sm { width: $width; }
+
+@media only screen and (min-width: $breakpoint-med) {
+  .msd-grid__col-1 { width:($width / 12) - ($gutter * 11 / 12); }
+  .msd-grid__col-2 { width: ($width / 6) - ($gutter * 10 / 12); }
+  .msd-grid__col-3 { width: ($width / 4) - ($gutter * 9 / 12); }
+  .msd-grid__col-4 { width: ($width / 3) - ($gutter * 8 / 12); }
+  .msd-grid__col-5 { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+  .msd-grid__col-6 { width: ($width / 2) - ($gutter * 6 / 12); }
+  .msd-grid__col-7 { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+  .msd-grid__col-8 { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+  .msd-grid__col-9 { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+  .msd-grid__col-10 { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+  .msd-grid__col-11 { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+  .msd-grid__col-12 { width: $width; }
+
+}
+
+//GRID
+.msd-grid__basic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}

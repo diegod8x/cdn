@@ -1,0 +1,186 @@
+/*--- Contenedores ---*/
+
+// Update sintaxis
+// Contenedores para contrucción de layout
+.msd_content_24x24,
+.msd-content-24x24 {
+  padding: 24px;
+}
+
+.msd_content_0x24x24,
+.msd-content-0x24x24 {
+  padding: 0 24px 24px;
+}
+
+.msd_content_24x24x0,
+.msd-content-24x24x0 {
+  padding: 24px 24px 0;
+}
+
+.msd-content-16x24x24 {
+  padding: 16px 24px 24px;
+}
+
+.msd_content_16x24,
+.msd-content-16x24 {
+  padding: 16px 24px;
+}
+
+.msd_content_16x16,
+.msd-content-16x16 {
+  padding: 16px;
+}
+
+// card default styles
+.msd_card_p_16 {
+  padding: 16px;
+}
+
+.msd_card_m_8x0 {
+  margin: 8px 0px;
+}
+
+.msd_card_m_16x0 {
+  margin: 16px 0px;
+}
+
+.msd_card_p_8x16x12x16 {
+  padding: 8px 16px 12px 16px;
+}
+
+.msd_card_m_16 {
+  margin: 16px;
+}
+
+.msd_card_m_16x24 {
+  margin: 16px 24px;
+}
+
+//Contenedor para botones de navegación, usar el modificador si se quiere dejar fijo
+.msd-bottom-buttons {
+  padding: 8px 32px;
+  background: white;
+
+  // Modificador para botones hoizontales
+  &--horizontal {
+    display: flex;
+
+    & button {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // Modificador para dejar fijo
+  &--fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    // margin-top: 54px;
+  }
+}
+.msd-buttons {
+  &--underline {
+    text-decoration: underline;
+    text-decoration-color: $accent_color;
+  }
+}
+
+// Layout utilidades // *crear view de ejemplo(hubspot)
+
+// Nesesario para partir
+.msd-display-flex {
+  display: flex;
+}
+
+// "aling" aplica para alicion a la vertical
+.msd-align-baseline {
+  align-items: baseline;
+}
+
+.msd-align-center {
+  align-items: center;
+}
+
+.msd-align-end {
+  align-items: flex-end;
+}
+
+.msd-align-start {
+  align-items: flex-start;
+}
+
+.msd-align-strech {
+  align-items: stretch;
+}
+
+.msd-align-strech {
+  align-items: stretch;
+}
+
+// "justify distribuye el spacio"
+.msd-justify-around {
+  justify-content: space-around;
+}
+
+.msd-justify-between {
+  justify-content: space-between;
+}
+
+.msd-justify-center {
+  justify-content: center;
+}
+
+.msd-justify-end {
+  justify-content: flex-end;
+}
+
+.msd-justify-start {
+  justify-content: flex-start;
+}
+
+/// Antiguo portar a nuevos
+.bech_content_24x24 {
+  padding: 24px;
+}
+
+.bech_content_16x24 {
+  padding: 16px 24px;
+}
+
+.bech_content_16x16 {
+  padding: 16px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+}
+/*---- Fin contenedores ----*/
+
+// Contenedor fijo abajo
+
+.bech_bottom_buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+// contenedor msd-card-saldo
+
+.content-card-saldo {
+  padding: 24px;
+  background: $bg_color;
+}
+
+.position_end{
+  position: absolute;
+  bottom: 0px;
+  width: -webkit-fill-available;
+}

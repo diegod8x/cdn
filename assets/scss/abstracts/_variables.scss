@@ -1,0 +1,294 @@
+// NEW COLOR NAMES
+
+//OrangeBech
+$OrangeBech100: #FF7900;
+$OrangeBech50: #F7C880;
+$OrangeBech40: #F7D399;
+$OrangeBech20: #F7E9CC;
+$OrangeBech10: #F7F4E6;
+$OrangeBech5: #F7F9F2;
+//AccentBech
+$AccentBech100: #3e50b4;
+$AccentBech50: #9FA8DA;
+$AccentBech40: #B2B9E1;
+$AccentBech20: #D8DCF0;
+$AccentBech10: #ECEEF8;
+$AccentBech5: #F5F6FB;
+//BlackBech
+$BlackBech100: #2c3038;
+$BlackBech80: #565960;
+$BlackBech70: #6B6E74;
+$BlackBech50: #96989C;
+$BlackBech40: #ABACAF;
+$BlackBech30: #C0C1C3;
+$BlackBech20: #D5D6D7;
+$BlackBech10: #EAEAEB;
+$BlackBech5: #F4F4F5;
+//GreenEmerald
+$GreenEmerald120: #117a65; // Color para textos accesibles
+$GreenEmerald110: #15987E;
+$GreenEmerald100: #1ABC9C; 
+$GreenEmerald50: #8CDDCD;
+$GreenEmerald40: #A3E4D7; 
+$GreenEmerald20: #D1F2EB; 
+$GreenEmerald10: #E9F9F6; 
+$GreenEmerald5: #F3FAF8; 
+//BlueLight
+$BlueLight100: #2ea4e8;
+$BlueLight50: #97D2F4;
+$BlueLight40: #ABDBF6;
+$BlueLight20: #D5EDFA;
+$BlueLight10: #EAF6FD;
+$BlueLight5: #F5FAFE;
+//RedRust100
+$RedRust120:#ab3333;
+$RedRust100:#D64040;
+$RedRust50:#EBA0A0;
+$RedRust40:#EFB3B3;
+$RedRust20:#F7D9D9;
+$RedRust10:#FBECEC;
+$RedRust5:#FDF5F5;
+//YellowGold
+$YellowGold100: #FFBF47;
+$YellowGold50: #FFDFA3;
+$YellowGold40: #FFE5B5;
+$YellowGold20: #FFF2DA;
+$YellowGold10: #FFF9ED;
+$YellowGold5: #FEFDF4;
+//White
+$White100: #ffffff;
+$bg_color: #f6f7f8;
+//Focus
+$OrangeFocus100: #e46113;
+
+
+// COLORES
+//orange
+$bech_color: #FF7900;
+$bech_color_50: #FFC880;
+$bech_color_40: #FFD399;
+$bech_color_20: #FFE9CC;
+$bech_color_10: #FFF4E6;
+$bech_color_5: #FFF9F2;
+
+//accent
+$accent_color: #3e50b4;
+$accent_color_50: #9FA8DA;
+$accent_color_40: #B2B9E1;
+$accent_color_20: #D8DCF0;
+$accent_color_10: #ECEEF8;
+$accent_color_5: #F5F6FB;
+
+
+//font
+$font_color: #2c3038;
+$font_color_80: #565960;
+$font_color_70: #6B6E74;
+$font_color_50: #96989C;
+$font_color_40: #ABACAF;
+$font_color_30: #C0C1C3;
+$font_color_20: #D5D6D7;
+$font_color_10: #EAEAEB;
+$font_color_5: #F4F4F5;
+
+//green
+$green_color_dark: #15987E;
+$green_color: #1ABC9C; 
+$green_color_50: #8CDDCD;
+$green_color_40: #A3E4D7; 
+$green_color_20: #D1F2EB; 
+$green_color_10: #E9F9F6; 
+$green_color_5: #F3FAF8; 
+
+//cyan
+$cyan_color: #2ea4e8;
+$cyan_color_50: #97D2F4;
+$cyan_color_40: #ABDBF6;
+$cyan_color_20: #D5EDFA;
+$cyan_color_10: #EAF6FD;
+$cyan_color_5: #F5FAFE;
+
+//red
+$red_color:#D64040;
+$red_color_50:#EBA0A0;
+$red_color_40:#EFB3B3;
+$red_color_20:#F7D9D9;
+$red_color_10:#FBECEC;
+$red_color_5:#FDF5F5;
+
+//yellow
+$yellow_color: #FFBF47;
+$yellow_color_50: #FFDFA3;
+$yellow_color_40: #FFE5B5;
+$yellow_color_20: #FFF2DA;
+$yellow_color_10: #FFF9ED;
+$yellow_color_5: #FEFDF4;
+
+// greys- white
+$input_border: #A4AAB6;
+$disable: #e1e4e7;
+$bg_color: #F6F7F8;
+
+//accent 3
+$accent_color3: #764778;
+$accent_color3_50: #BAA2BB;
+$accent_color3_20: #E4DAE4;
+$accent_color3_10: #F2EDF2;
+
+//others
+$header-silver: #e9eaeb;
+$header_blue: #E6E8F2;
+$magenta_color:#d53880;
+$green_color_text: #068453;
+$header-silver: #e9eaeb;
+$yellow_color2: #FFBF47;
+
+
+//DEPRECAR (invalidos)
+$font_color2: #868c99; 
+$bech_color2: #ffbd65;
+$accent_color2: #7784ca;
+$red_bech:#FB1D38;
+$border_color: #c3c7ce;
+$list_border: #e9ecf0; 
+$text-disable: #c3c7ce;
+$bg_disable: #e1e4e7;
+$tap-color: #fbecd7;
+$header-green: #e6f9f1;
+$header-accent: #3e50b4;
+$toggle_background: #ccc;
+$header-accent: #3e50b4;
+$title_slide_toggle: #222;
+$celeste_001:#00acdc;
+$celeste_002:#24ace4;
+$celeste_003:#1283c6;
+$magenta_color:#d53880;
+$verde_001:#1abc9c;
+$verde_002:#85c05f;
+$verde_003:#0dc994;
+$red_001:#d13c3c;
+$black_002:#232425;
+$orange_003:#f08524;
+//wizard
+$disable_wizard:#A2A9B6;
+$dot_wizard: #CBCED6;
+$wizard_line: #B8B6B6;
+//data-table
+$table_header: #ECEEF8;
+// HELPERS
+// Fix hidden cuando existen elementos que posen display
+[hidden] { display: none !important;}
+
+//DIVIDERS
+hr{
+  border-top: 1px solid $border_color;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  &.msd-dashed {
+    border-top: 1px dashed $border_color;
+  }
+  &.msd-dotted {
+    border-top: 2px dotted $border_color;
+  }
+}
+
+// SHADOWS
+$card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+$card-shadow-short: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+$card-shadow-long: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+$card-shadow-modal: 0 20px 30px 0 rgba(0, 0, 0, 0.18);
+$card-radius: 4px;
+
+@mixin msd-titulo1 {
+  font-size: 2rem;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+@mixin msd-titulo2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+@mixin msd-titulo3 {
+  font-size: 1.25rem;
+  line-height: 28px;
+  font-weight: 800;
+}
+
+@mixin msd-large {
+  font-size: 1.125rem;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+@mixin msd-body {
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin msd-small {
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin msd-mini {
+  font-size: 0.75rem;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+@mixin msd-micro {
+  font-size: 0.625rem;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+
+// MARGINS
+$margin5: 5px;
+$margin10: 10px;
+$margin15: 15px;
+$margin20: 20px;
+
+// PADDINGS
+$padding5: 5px;
+$padding10: 10px;
+$padding15: 15px;
+$padding20: 20px;
+
+// SHADOWS
+$shadow-btn: 0 2px 4px rgba(0, 0, 0, .12);
+$small-shadow: 0px 3px 6px $font_color2;
+$big-shadow: 0px 5px 12px $font_color2;
+
+// BORDER-RADIUS
+$radius4: 4px;
+$radius5: 5px;
+$radius8: 8px;
+$radius40: 40px;
+$radius44: 44px;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//QUERIES
+$msd-xs: 575.99999998px;
+$msd-sm-1: 576px;
+$msd-sm-2: 767.999998px;
+$msd-md-1: 768px;
+$msd-md-2: 991.999998px;
+$msd-lg-1: 992px;
+$msd-lg-2: 1199.999998px;
+$msd-xl: 1200px;
